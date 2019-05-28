@@ -17,6 +17,9 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".main.links.LinkActivity"
+            android:parentActivityName=".main.AppBase" />
+        <activity
             android:name=".main.profile.ProfileActivity"
             android:parentActivityName=".main.AppBase" />
         <activity

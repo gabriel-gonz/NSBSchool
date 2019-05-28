@@ -37,6 +37,7 @@ import java.util.ArrayList;
 import assistant.genuinecoder.s_assistant.R;
 import assistant.genuinecoder.s_assistant.main.AppBase;
 import assistant.genuinecoder.s_assistant.main.attendance.AttendanceActivity;
+import assistant.genuinecoder.s_assistant.main.links.LinkActivity;
 import assistant.genuinecoder.s_assistant.main.notes.NoteActivity;
 import assistant.genuinecoder.s_assistant.main.profile.ProfileActivity;
 import assistant.genuinecoder.s_assistant.main.schedule.Scheduler;
@@ -183,6 +184,25 @@ public class GridAdapter extends BaseAdapter {
                 @Override
                 public void onClick(View v) {
                     Intent launchinIntent = new Intent(activity, CgpaActivity.class);
+                    activity.startActivity(launchinIntent);
+                }
+            });
+            Animation anim = new ScaleAnimation(
+                    0.95f, 1f, // Start and end values for the X axis scaling
+                    0.95f, 1f, // Start and end values for the Y axis scaling
+                    Animation.RELATIVE_TO_SELF, 0.5f, // Pivot point of X scaling
+                    Animation.RELATIVE_TO_SELF, 0.5f); // Pivot point of Y scaling
+            anim.setFillAfter(true); // Needed to keep the result of the animation
+            anim.setDuration(2000);
+            anim.setRepeatMode(Animation.INFINITE);
+            anim.setRepeatCount(Animation.INFINITE);
+            imageView.startAnimation(anim);
+        } else if (names.get(position).toString().equals("LINKS")) {
+            imageView.setImageResource(R.drawable.ic_link);
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent launchinIntent = new Intent(activity, LinkActivity.class);
                     activity.startActivity(launchinIntent);
                 }
             });

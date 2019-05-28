@@ -178,13 +178,23 @@ public class GridAdapter extends BaseAdapter {
             anim.setRepeatMode(Animation.INFINITE);
             anim.setRepeatCount(Animation.INFINITE);
             imageView.startAnimation(anim);
-        } else if (names.get(position).toString().equals("CGPA CALCULATOR")) {
-            imageView.setImageResource(R.drawable.ic_cgpa);
+        } else if (names.get(position).toString().equals("COMMUNICATION")) {
+            imageView.setImageResource(R.drawable.ic_communication);
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent launchinIntent = new Intent(activity, CgpaActivity.class);
-                    activity.startActivity(launchinIntent);
+                    Intent intent = null, chooser = null;
+                    intent = new Intent(Intent.ACTION_SEND);
+                    intent.setData(Uri.parse("mailto:"));
+                    String[] to = {"emailAddress1", "emailAddress2"};
+                    intent.putExtra(Intent.EXTRA_EMAIL, to);
+                    intent.putExtra(Intent.EXTRA_SUBJECT, "Email test");
+                    intent.putExtra(Intent.EXTRA_TEXT, "Hi there. Testing the mail app");
+                    intent.setType("message/rfc822");
+                    chooser = Intent.createChooser(intent, "Send Email");
+                    activity.startActivity(chooser);
+//                    Intent launchinIntent = new Intent(activity, CommunicationActivity.class);
+//                    activity.startActivity(launchinIntent);
                 }
             });
             Animation anim = new ScaleAnimation(

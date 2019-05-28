@@ -14,14 +14,19 @@
 
     <Button
         android:id="@+id/sendMail"
-        android:layout_width="188dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="8dp"
+
+        android:layout_width="178dp"
+        android:layout_height="75dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="115dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="306dp"
+        android:layout_marginEnd="114dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="256dp"
+        android:layout_marginBottom="334dp"
         android:onClick="process"
         android:text="OPEN EMAIL SERVICE" />
 </RelativeLayout>

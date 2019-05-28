@@ -33,9 +33,9 @@
             android:parentActivityName=".main.AppBase" />
         <activity
             android:name=".main.components.ResultActivity"
-            android:parentActivityName=".main.components.CgpaActivity" />
+            android:parentActivityName=".main.components.CommunicationActivity" />
         <activity
-            android:name=".main.components.CgpaActivity"
+            android:name=".main.components.CommunicationActivity"
             android:parentActivityName=".main.AppBase" />
         <activity
             android:name=".main.notes.NoteActivity"

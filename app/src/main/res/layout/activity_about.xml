@@ -34,9 +34,9 @@
 
     <ImageView
         android:id="@+id/imageViewAbout"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/ic_action_done_all"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/logo"
         android:layout_alignTop="@+id/abcde"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

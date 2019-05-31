@@ -44,13 +44,9 @@ public class AppBase extends AppCompatActivity {
 
         getSupportActionBar().show();
         divisions = new ArrayList<>();
-        divisions.add("S1 COMPUTER SCIENCE");
-        divisions.add("S2 COMPUTER SCIENCE");
-        divisions.add("S3 COMPUTER SCIENCE");
-        divisions.add("S4 COMPUTER SCIENCE");
-        divisions.add("S5 COMPUTER SCIENCE");
-        divisions.add("S6 COMPUTER SCIENCE");
-        divisions.add("S7 COMPUTER SCIENCE");
+        divisions.add("Level 1 Beginner");
+        divisions.add("Level 2 Intermediate");
+        divisions.add("Level 3 Advanced");
         gridView = (GridView) findViewById(R.id.grid);
         basicFields.add("ATTENDANCE");
         basicFields.add("SCHEDULER");
